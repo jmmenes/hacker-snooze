@@ -1,0 +1,167 @@
+/* Resets the pages default margin and padding for the entire html file. 
+This will allow you to have more control when you are styling specific elements. */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Fonts */
+@font-face {
+  font-family: "YanoneKaffeesatz-SemiBold";
+  src: url("static/YanoneKaffeesatz-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "YanoneKaffeesatz-Light";
+  src: url("static/YanoneKaffeesatz-Light.ttf") format("truetype");
+}
+
+h1 {
+  font-family: "YanoneKaffeesatz-SemiBold" !important;
+  font-size: 375% !important;
+  color: white;
+  text-shadow: 4px 4px 16px black;
+}
+
+p {
+  font-family: "YanoneKaffeesatz-Light" !important;
+  font-size: 120% !important; /* makes font bigger on 50% */
+  color: black;
+}
+
+a {
+  font-family: "YanoneKaffeesatz-SemiBold" !important;
+  font-size: 185% !important; /* makes font bigger on 50% */
+  color: black;
+  text-shadow: 0 0 5px #3abae0;
+}
+
+/* Header Content */
+#header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 15vh;
+  border: 5px groove #3abae0;
+  background-image: linear-gradient(to right, #cdcdcd, #cdcdcd, #3abae0, #3abae0);
+}
+#header-left {
+  width: auto;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#header-center {
+  flex-grow: 1;
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: none;
+}
+#header-right {
+  width: auto;
+  height: auto;
+  margin-right: 20px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: none;
+}
+
+#header-left > img {
+  height: 80px;
+  margin-left: 20px;
+}
+/* Header Content */
+
+/* Body Content */
+#left {
+  float: right;
+  margin: 220px 50px 75px 50px; /* Top, Right, Bottom, Left */
+}
+
+#body {
+  background-image: linear-gradient(to right, #cdcdcd, #cdcdcd, #3abae0, #3abae0);
+  border: 5px groove #3abae0;
+  border-top: 0;
+}
+
+.parent {
+  border: 5px solid none;
+  padding: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#body > .parent > a {
+  color: black;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+#body > .parent > p {
+  color: grey;
+  font-size: 15px;
+}
+/* Body Content */
+
+/* Footer Content */
+#footer {
+  border: 5px groove #3abae0;
+  border-top: 0;
+  background-image: linear-gradient(to right, #cdcdcd, #cdcdcd, #3abae0, #3abae0);
+  color: black;
+  height: auto;
+  align-items: center;
+  justify-content: center;
+}
+
+#footer-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#footer-links > a {
+  text-decoration: none;
+  color: black;
+  font-size: medium;
+  margin: 3px;
+}
+
+#footer-search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1px;
+  margin-bottom: 11px;
+}
+/* Footer Content */
+
+/* Media Query for Mobile Devices */
+@media screen and (max-width: 700px) {
+  #header {
+    flex-wrap: wrap;
+    height: auto;
+  }
+  #header-left {
+    width: 100%;
+    text-align: center;
+  }
+  #header-center {
+    width: 100%;
+  }
+  #left {
+    width: 100%;
+    height: auto;
+  }
+  #footer-links {
+    flex-direction: column;
+  }
+  #footer-links > p {
+    display: none;
+  }
+}
